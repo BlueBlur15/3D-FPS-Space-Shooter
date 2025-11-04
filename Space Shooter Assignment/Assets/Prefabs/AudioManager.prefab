@@ -48,14 +48,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfxSource: {fileID: 3220949255622940327}
   musicSource: {fileID: 8384114890310895237}
-  jumpSound: {fileID: 0}
-  landSound: {fileID: 0}
-  walkSound: {fileID: 0}
-  sprintSound: {fileID: 0}
-  crouchSound: {fileID: 0}
-  deathSound: {fileID: 0}
-  hurtSoundOne: {fileID: 0}
-  hurtSoundTwo: {fileID: 0}
+  jumpSound: {fileID: 8300000, guid: 5f4e8d338b2dcb54f98f9d29f2615e6e, type: 3}
+  landSound: {fileID: 8300000, guid: 5c93f90dcefd63e47a948609991fe111, type: 3}
+  walkSound: {fileID: 8300000, guid: deebe71ce7049804d9cad847cc6dc8a8, type: 3}
+  sprintSound: {fileID: 8300000, guid: 91717fa3c83cca84a954e834310872e2, type: 3}
+  crouchSound: {fileID: 8300000, guid: c00f45682d6b67f4c90c34d2098305c2, type: 3}
+  deathSound: {fileID: 8300000, guid: 7c887563ac3c78b49a0ef790fbf92f49, type: 3}
+  hurtSoundOne: {fileID: 8300000, guid: 973daae481631ad4fb86671b77a4bfb3, type: 3}
+  hurtSoundTwo: {fileID: 8300000, guid: ca550f2b717abf941b66ceb564858031, type: 3}
   alienOneIdleSound: {fileID: 0}
   alienOneDeathSound: {fileID: 0}
   alienOneAttackSound: {fileID: 0}
