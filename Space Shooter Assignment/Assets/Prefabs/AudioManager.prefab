@@ -56,18 +56,18 @@ MonoBehaviour:
   deathSound: {fileID: 8300000, guid: 7c887563ac3c78b49a0ef790fbf92f49, type: 3}
   hurtSoundOne: {fileID: 8300000, guid: 973daae481631ad4fb86671b77a4bfb3, type: 3}
   hurtSoundTwo: {fileID: 8300000, guid: ca550f2b717abf941b66ceb564858031, type: 3}
-  alienOneIdleSound: {fileID: 0}
-  alienOneDeathSound: {fileID: 0}
-  alienOneAttackSound: {fileID: 0}
-  alienOneHurtSound: {fileID: 0}
-  alienTwoIdleSound: {fileID: 0}
-  alienTwoDeathSound: {fileID: 0}
-  alienTwoAttackSound: {fileID: 0}
-  alienTwoHurtSound: {fileID: 0}
-  alienThreeIdleSound: {fileID: 0}
-  alienThreeDeathSound: {fileID: 0}
-  alienThreeAttackSound: {fileID: 0}
-  alienThreeHurtSound: {fileID: 0}
+  alienOneIdleSound: {fileID: 8300000, guid: 3ce618f6096abf54faa7f14dabef44f6, type: 3}
+  alienOneDeathSound: {fileID: 8300000, guid: 630555fdf6a2f9346a3d2e19a15a7c08, type: 3}
+  alienOneAttackSound: {fileID: 8300000, guid: 69581640d253e6a428a83b10d9c3e567, type: 3}
+  alienOneHurtSound: {fileID: 8300000, guid: 4a0b4f67e15826b4bb511899c1d10994, type: 3}
+  alienTwoIdleSound: {fileID: 8300000, guid: df494cde9fd433647b5c1576e67b79f0, type: 3}
+  alienTwoDeathSound: {fileID: 8300000, guid: 231f0c49b1b641a45888ebe52f4c219f, type: 3}
+  alienTwoAttackSound: {fileID: 8300000, guid: 6ca43e1fb2b816b4e8f51b2e21dd8432, type: 3}
+  alienTwoHurtSound: {fileID: 8300000, guid: 684eb725674ecd944938cc6aaf4439d8, type: 3}
+  alienThreeIdleSound: {fileID: 8300000, guid: 529a0d7433381594a818448e5e024de9, type: 3}
+  alienThreeDeathSound: {fileID: 8300000, guid: 1f254a18a07742648acefc672111f03e, type: 3}
+  alienThreeAttackSound: {fileID: 8300000, guid: a06977d03dfb4e1498da5a5b35edc0a2, type: 3}
+  alienThreeHurtSound: {fileID: 8300000, guid: 72d174bcc09ae4343a9b67d8d73a88f3, type: 3}
   pistolFireSound: {fileID: 0}
   pistolReloadSound: {fileID: 0}
   semiRifleFireSound: {fileID: 0}
