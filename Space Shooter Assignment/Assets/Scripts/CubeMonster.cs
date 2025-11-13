@@ -7,7 +7,7 @@ public class CubeMonster : MonoBehaviour
     [Header("Follow Settings")]
     public float followRange = 10f;         // how close the player needs to be
     public float moveSpeed = 3f;            // how fast the cube moves
-    public float stopDistance = 2f;         // how close it stops before bumping into you
+    public float stopDistance = 0.2f;         // how close it stops before bumping into you
 
     private Transform player;
 

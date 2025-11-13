@@ -1,18 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public TextMeshProUGUI healthText;
+    public TextMeshProUGUI livesText;
+
+    private PlayerHealth playerHealth;
+
+    private void OnEnable()
     {
-        
+        playerHealth = FindObjectOfType<PlayerHealth>();
+        if (playerHealth != null)
+        {
+            playerHealth.OnHealthOrLivesChanged += HandleHealthChanged;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        if (playerHealth != null)
+        {
+            playerHealth.OnHealthOrLivesChanged -= HandleHealthChanged;
+        }
+    }
+
+    void HandleHealthChanged(int currentHealth, int lives)
+    {
+        if (healthText != null)
+            healthText.text = "Health: " + currentHealth;
+
+        if (livesText != null)
+                livesText.text = "Lives: " + lives;
     }
 }
