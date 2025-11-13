@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour
+public class Audiomanager : MonoBehaviour
 {
-    public static AudioManager instance;
+    public static Audiomanager instance;
     [SerializeField] private AudioSource sfxSource;
     [SerializeField] private AudioSource musicSource;
 
