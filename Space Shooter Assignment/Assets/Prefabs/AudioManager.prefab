@@ -68,21 +68,21 @@ MonoBehaviour:
   alienThreeDeathSound: {fileID: 8300000, guid: 1f254a18a07742648acefc672111f03e, type: 3}
   alienThreeAttackSound: {fileID: 8300000, guid: a06977d03dfb4e1498da5a5b35edc0a2, type: 3}
   alienThreeHurtSound: {fileID: 8300000, guid: 72d174bcc09ae4343a9b67d8d73a88f3, type: 3}
-  pistolFireSound: {fileID: 0}
-  pistolReloadSound: {fileID: 0}
-  semiRifleFireSound: {fileID: 0}
-  semiRifleReloadSound: {fileID: 0}
-  autoRifleFireSound: {fileID: 0}
-  autoRifleReloadSound: {fileID: 0}
-  ricochetGunFireSound: {fileID: 0}
-  ricochetGunReloadSound: {fileID: 0}
-  knifeSwingSound: {fileID: 0}
-  knifeFleshSound: {fileID: 0}
-  knifeObjectSound: {fileID: 0}
-  grenadeThrowSound: {fileID: 0}
-  grenadeExplodeSound: {fileID: 0}
-  weaponPickupSound: {fileID: 0}
-  weaponObjectSound: {fileID: 0}
+  pistolFireSound: {fileID: 8300000, guid: 871078623eb446e4a9b71da3eedc2e38, type: 3}
+  pistolReloadSound: {fileID: 8300000, guid: f202de1ec16c9b24a81b894ac9016ac1, type: 3}
+  semiRifleFireSound: {fileID: 8300000, guid: a428252816d812b4da239bea664f9a31, type: 3}
+  semiRifleReloadSound: {fileID: 8300000, guid: caeaecea1d778914fbfce54dcf4b695a, type: 3}
+  autoRifleFireSound: {fileID: 8300000, guid: 35bd99efd94788b47a0c0395de5a1a60, type: 3}
+  autoRifleReloadSound: {fileID: 8300000, guid: 9d36e139f4c67b846bd4cb04707f4f5a, type: 3}
+  ricochetGunFireSound: {fileID: 8300000, guid: 48f991a7a4a4ca044a1193021dcec91b, type: 3}
+  ricochetGunReloadSound: {fileID: 8300000, guid: a0e06ddbedbece64b8d67241bb0d9efb, type: 3}
+  knifeSwingSound: {fileID: 8300000, guid: f9275184ecd7f184b8b38a2a34b14280, type: 3}
+  knifeFleshSound: {fileID: 8300000, guid: 9e1a3fe7e20d35a4cb4f933b1caed23c, type: 3}
+  knifeObjectSound: {fileID: 8300000, guid: c634374a4d3d9bb44b07180e1681eec5, type: 3}
+  grenadeThrowSound: {fileID: 8300000, guid: d8262c246fa6e594cabc375a49b26b92, type: 3}
+  grenadeExplodeSound: {fileID: 8300000, guid: 8d887975a0b733a4cad8b5c7713a17f8, type: 3}
+  weaponPickupSound: {fileID: 8300000, guid: fb2d0c3dceff0f843b8339657ecd48aa, type: 3}
+  weaponObjectSound: {fileID: 8300000, guid: dd43b81629435644f964ed6d77a2b956, type: 3}
   horrorOneSound: {fileID: 0}
   horrorTwoSound: {fileID: 0}
   horrorThreeSound: {fileID: 0}
