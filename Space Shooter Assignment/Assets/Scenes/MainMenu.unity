@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -42,8 +42,8 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
-  m_GIWorkflowMode: 1
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -66,9 +66,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -96,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -178,9 +175,8 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   m_Enabled: 1
-  serializedVersion: 10
+  serializedVersion: 11
   m_Type: 1
-  m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10
@@ -230,8 +226,12 @@ Light:
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!4 &705507995
 Transform:
   m_ObjectHideFlags: 0
@@ -351,6 +351,202 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: fbd20e6ec60213249b0d226ed2fe790e, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: landSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6cd79112a1258844ab7b0cf305f127d7, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: walkSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7ea61e0907bb0cc468b70fcae4aef64c, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ce5c0da4e9b03f64d8e8858566820ab6, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: combatMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 59a7fcae22b7dce4fa6e846c2084554a, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: crouchSound
+      value: 
+      objectReference: {fileID: 8300000, guid: fbb6d64654c5cc84b95b3c6ba9f7620b, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: escapeMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 91a062e6a807ae04fbe35a9f7bd76abf, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: sprintSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 06ba4cef26fa96b4b9c1e8f04497642f, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: gameWinMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: f483ba398a3512145866c6a3966bc1e5, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: hurtSoundOne
+      value: 
+      objectReference: {fileID: 8300000, guid: d61cd011ec0e7374f8ac80823b35bfb5, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: hurtSoundTwo
+      value: 
+      objectReference: {fileID: 8300000, guid: 54db41bf5bea4724c9dcc2ce100e416a, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: beepingSounds
+      value: 
+      objectReference: {fileID: 8300000, guid: b9aef167dabe485408f4c6b79e5a018e, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: doorOpenSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ed121f7508eb46f41995618758bf128b, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: gameOverMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 3f1f96ee366f83f488cc5220c5957118, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: mainMenuMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 912ffa6120e412048aff0fb0fd5d1ccf, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: doorCloseSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 44eb180d9d990454b8fb4e3312f96adf, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: explosionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ad627d22f8484834dbdb395f99f8ca3e, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: generatorSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 1ddf8d5d936020d45a117218d51b7704, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: horrorOneSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2a9264fe036221443bbf93a1d376bb59, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: horrorTwoSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7a9a185988d95f84a812952716c58de9, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: pauseMenuMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 8e31c6de95682994494d01bf6bd520be, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: knifeFleshSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d4558f69aa90f254bb81a967197a5029, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: knifeSwingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 92ffa9012a903e3428a3fafff4ed63a8, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: pistolFireSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4312537513ea46440bb72c29773bbd48, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: horrorThreeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 24a2b447bd5abaf47b674881694c6576, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: knifeObjectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 08c34de8e48deac4d8c0e247fbb8d4dd, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: alienOneHurtSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4a5835e999d0cda48aaa2e8ba85da8eb, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: alienOneIdleSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b1b03b9722aaa52429e51928476601e0, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: alienTwoHurtSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b4184f250ee13c14493a8f4f887b49e2, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: alienTwoIdleSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ef21d29eaf7afcd4c8d6c2193e78c80c, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: grenadeThrowSound
+      value: 
+      objectReference: {fileID: 8300000, guid: cfc5f0b3e23c09946ac11fc6be9f3fa3, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: pistolReloadSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b402fee774c9cfa4596dfa07ed9c6b2f, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: weaponObjectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: f1a30d577e06bbb46ba74fcdfe4ab636, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: weaponPickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e97b595375d58d49b584d99c3683aa8, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: alienOneDeathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: aa0121f3b254c6c4e95ac875e0fb05c6, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: alienTwoDeathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 8e8226f3839efae4085ed24121087b86, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: autoRifleFireSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ae8963bf1e770244e8601ebdf8af4a74, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: semiRifleFireSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c1040e7b872000544ab200bcf4368f76, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: alienOneAttackSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6a8581fb7abf0fa46ab60bda5ad91d08, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: alienThreeHurtSound
+      value: 
+      objectReference: {fileID: 8300000, guid: f07b8055292638e468afcd5266af6e94, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: alienThreeIdleSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2a8af3cd025f2394199aa7282b853242, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: alienTwoAttackSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d136544f6bda7d84abdef68fb51f17e2, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: grenadeExplodeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: fb68c59195a4327489ab657cd548769d, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: alienThreeDeathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a08741368c3d2c74c9838a2b83f00921, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: autoRifleReloadSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 649a24309392f9c4083028e48299c2b9, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: ricochetGunFireSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 1b689f1a9dcea174b9752257b8a6598d, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: semiRifleReloadSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d7bde8e9b2685f446b1aee0eb5ec6087, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: alienThreeAttackSound
+      value: 
+      objectReference: {fileID: 8300000, guid: fec0f3ac90a4a994699e797dc118af3f, type: 3}
+    - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
+      propertyPath: ricochetGunReloadSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ce4a12ab07cfa1647b1de7769d6e8e58, type: 3}
     - target: {fileID: 4445824113300599315, guid: a8770bf467793854687d723d007feb52, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

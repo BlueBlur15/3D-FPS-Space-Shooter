@@ -48,55 +48,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfxSource: {fileID: -1716748242801845156}
   musicSource: {fileID: 1049136234373928559}
-  jumpSound: {fileID: 8300000, guid: 5f4e8d338b2dcb54f98f9d29f2615e6e, type: 3}
-  landSound: {fileID: 8300000, guid: 5c93f90dcefd63e47a948609991fe111, type: 3}
-  walkSound: {fileID: 8300000, guid: deebe71ce7049804d9cad847cc6dc8a8, type: 3}
-  sprintSound: {fileID: 8300000, guid: 91717fa3c83cca84a954e834310872e2, type: 3}
-  crouchSound: {fileID: 8300000, guid: c00f45682d6b67f4c90c34d2098305c2, type: 3}
-  deathSound: {fileID: 8300000, guid: 7c887563ac3c78b49a0ef790fbf92f49, type: 3}
-  hurtSoundOne: {fileID: 8300000, guid: 973daae481631ad4fb86671b77a4bfb3, type: 3}
-  hurtSoundTwo: {fileID: 8300000, guid: ca550f2b717abf941b66ceb564858031, type: 3}
-  alienOneIdleSound: {fileID: 8300000, guid: 3ce618f6096abf54faa7f14dabef44f6, type: 3}
-  alienOneDeathSound: {fileID: 8300000, guid: 630555fdf6a2f9346a3d2e19a15a7c08, type: 3}
-  alienOneAttackSound: {fileID: 8300000, guid: 69581640d253e6a428a83b10d9c3e567, type: 3}
-  alienOneHurtSound: {fileID: 8300000, guid: 4a0b4f67e15826b4bb511899c1d10994, type: 3}
-  alienTwoIdleSound: {fileID: 8300000, guid: df494cde9fd433647b5c1576e67b79f0, type: 3}
-  alienTwoDeathSound: {fileID: 8300000, guid: 231f0c49b1b641a45888ebe52f4c219f, type: 3}
-  alienTwoAttackSound: {fileID: 8300000, guid: 6ca43e1fb2b816b4e8f51b2e21dd8432, type: 3}
-  alienTwoHurtSound: {fileID: 8300000, guid: 684eb725674ecd944938cc6aaf4439d8, type: 3}
-  alienThreeIdleSound: {fileID: 8300000, guid: 529a0d7433381594a818448e5e024de9, type: 3}
-  alienThreeDeathSound: {fileID: 8300000, guid: 1f254a18a07742648acefc672111f03e, type: 3}
-  alienThreeAttackSound: {fileID: 8300000, guid: a06977d03dfb4e1498da5a5b35edc0a2, type: 3}
-  alienThreeHurtSound: {fileID: 8300000, guid: 72d174bcc09ae4343a9b67d8d73a88f3, type: 3}
-  pistolFireSound: {fileID: 8300000, guid: 871078623eb446e4a9b71da3eedc2e38, type: 3}
-  pistolReloadSound: {fileID: 8300000, guid: f202de1ec16c9b24a81b894ac9016ac1, type: 3}
-  semiRifleFireSound: {fileID: 8300000, guid: a428252816d812b4da239bea664f9a31, type: 3}
-  semiRifleReloadSound: {fileID: 8300000, guid: caeaecea1d778914fbfce54dcf4b695a, type: 3}
-  autoRifleFireSound: {fileID: 8300000, guid: 35bd99efd94788b47a0c0395de5a1a60, type: 3}
-  autoRifleReloadSound: {fileID: 8300000, guid: 9d36e139f4c67b846bd4cb04707f4f5a, type: 3}
-  ricochetGunFireSound: {fileID: 8300000, guid: 48f991a7a4a4ca044a1193021dcec91b, type: 3}
-  ricochetGunReloadSound: {fileID: 8300000, guid: a0e06ddbedbece64b8d67241bb0d9efb, type: 3}
-  knifeSwingSound: {fileID: 8300000, guid: f9275184ecd7f184b8b38a2a34b14280, type: 3}
-  knifeFleshSound: {fileID: 8300000, guid: 9e1a3fe7e20d35a4cb4f933b1caed23c, type: 3}
-  knifeObjectSound: {fileID: 8300000, guid: c634374a4d3d9bb44b07180e1681eec5, type: 3}
-  grenadeThrowSound: {fileID: 8300000, guid: d8262c246fa6e594cabc375a49b26b92, type: 3}
-  grenadeExplodeSound: {fileID: 8300000, guid: 8d887975a0b733a4cad8b5c7713a17f8, type: 3}
-  weaponPickupSound: {fileID: 8300000, guid: fb2d0c3dceff0f843b8339657ecd48aa, type: 3}
-  weaponObjectSound: {fileID: 8300000, guid: dd43b81629435644f964ed6d77a2b956, type: 3}
-  horrorOneSound: {fileID: 0}
-  horrorTwoSound: {fileID: 0}
-  horrorThreeSound: {fileID: 0}
-  explosionSound: {fileID: 0}
-  generatorSound: {fileID: 0}
-  beepingSounds: {fileID: 0}
-  doorOpenSound: {fileID: 0}
-  doorCloseSound: {fileID: 0}
-  mainMenuMusic: {fileID: 0}
-  pauseMenuMusic: {fileID: 0}
-  gameOverMusic: {fileID: 0}
-  gameWinMusic: {fileID: 0}
-  escapeMusic: {fileID: 0}
-  combatMusic: {fileID: 0}
+  jumpSound: {fileID: 8300000, guid: fbd20e6ec60213249b0d226ed2fe790e, type: 3}
+  landSound: {fileID: 8300000, guid: 6cd79112a1258844ab7b0cf305f127d7, type: 3}
+  walkSound: {fileID: 8300000, guid: 7ea61e0907bb0cc468b70fcae4aef64c, type: 3}
+  sprintSound: {fileID: 8300000, guid: 06ba4cef26fa96b4b9c1e8f04497642f, type: 3}
+  crouchSound: {fileID: 8300000, guid: fbb6d64654c5cc84b95b3c6ba9f7620b, type: 3}
+  deathSound: {fileID: 8300000, guid: ce5c0da4e9b03f64d8e8858566820ab6, type: 3}
+  hurtSoundOne: {fileID: 8300000, guid: d61cd011ec0e7374f8ac80823b35bfb5, type: 3}
+  hurtSoundTwo: {fileID: 8300000, guid: 54db41bf5bea4724c9dcc2ce100e416a, type: 3}
+  alienOneIdleSound: {fileID: 8300000, guid: b1b03b9722aaa52429e51928476601e0, type: 3}
+  alienOneDeathSound: {fileID: 8300000, guid: aa0121f3b254c6c4e95ac875e0fb05c6, type: 3}
+  alienOneAttackSound: {fileID: 8300000, guid: 6a8581fb7abf0fa46ab60bda5ad91d08, type: 3}
+  alienOneHurtSound: {fileID: 8300000, guid: 4a5835e999d0cda48aaa2e8ba85da8eb, type: 3}
+  alienTwoIdleSound: {fileID: 8300000, guid: ef21d29eaf7afcd4c8d6c2193e78c80c, type: 3}
+  alienTwoDeathSound: {fileID: 8300000, guid: 8e8226f3839efae4085ed24121087b86, type: 3}
+  alienTwoAttackSound: {fileID: 8300000, guid: d136544f6bda7d84abdef68fb51f17e2, type: 3}
+  alienTwoHurtSound: {fileID: 8300000, guid: b4184f250ee13c14493a8f4f887b49e2, type: 3}
+  alienThreeIdleSound: {fileID: 8300000, guid: 2a8af3cd025f2394199aa7282b853242, type: 3}
+  alienThreeDeathSound: {fileID: 8300000, guid: a08741368c3d2c74c9838a2b83f00921, type: 3}
+  alienThreeAttackSound: {fileID: 8300000, guid: fec0f3ac90a4a994699e797dc118af3f, type: 3}
+  alienThreeHurtSound: {fileID: 8300000, guid: f07b8055292638e468afcd5266af6e94, type: 3}
+  pistolFireSound: {fileID: 8300000, guid: 4312537513ea46440bb72c29773bbd48, type: 3}
+  pistolReloadSound: {fileID: 8300000, guid: b402fee774c9cfa4596dfa07ed9c6b2f, type: 3}
+  semiRifleFireSound: {fileID: 8300000, guid: c1040e7b872000544ab200bcf4368f76, type: 3}
+  semiRifleReloadSound: {fileID: 8300000, guid: d7bde8e9b2685f446b1aee0eb5ec6087, type: 3}
+  autoRifleFireSound: {fileID: 8300000, guid: ae8963bf1e770244e8601ebdf8af4a74, type: 3}
+  autoRifleReloadSound: {fileID: 8300000, guid: 649a24309392f9c4083028e48299c2b9, type: 3}
+  ricochetGunFireSound: {fileID: 8300000, guid: 1b689f1a9dcea174b9752257b8a6598d, type: 3}
+  ricochetGunReloadSound: {fileID: 8300000, guid: ce4a12ab07cfa1647b1de7769d6e8e58, type: 3}
+  knifeSwingSound: {fileID: 8300000, guid: 92ffa9012a903e3428a3fafff4ed63a8, type: 3}
+  knifeFleshSound: {fileID: 8300000, guid: d4558f69aa90f254bb81a967197a5029, type: 3}
+  knifeObjectSound: {fileID: 8300000, guid: 08c34de8e48deac4d8c0e247fbb8d4dd, type: 3}
+  grenadeThrowSound: {fileID: 8300000, guid: cfc5f0b3e23c09946ac11fc6be9f3fa3, type: 3}
+  grenadeExplodeSound: {fileID: 8300000, guid: fb68c59195a4327489ab657cd548769d, type: 3}
+  weaponPickupSound: {fileID: 8300000, guid: 3e97b595375d58d49b584d99c3683aa8, type: 3}
+  weaponObjectSound: {fileID: 8300000, guid: f1a30d577e06bbb46ba74fcdfe4ab636, type: 3}
+  horrorOneSound: {fileID: 8300000, guid: 2a9264fe036221443bbf93a1d376bb59, type: 3}
+  horrorTwoSound: {fileID: 8300000, guid: 7a9a185988d95f84a812952716c58de9, type: 3}
+  horrorThreeSound: {fileID: 8300000, guid: 24a2b447bd5abaf47b674881694c6576, type: 3}
+  explosionSound: {fileID: 8300000, guid: ad627d22f8484834dbdb395f99f8ca3e, type: 3}
+  generatorSound: {fileID: 8300000, guid: 1ddf8d5d936020d45a117218d51b7704, type: 3}
+  beepingSounds: {fileID: 8300000, guid: b9aef167dabe485408f4c6b79e5a018e, type: 3}
+  doorOpenSound: {fileID: 8300000, guid: ed121f7508eb46f41995618758bf128b, type: 3}
+  doorCloseSound: {fileID: 8300000, guid: 44eb180d9d990454b8fb4e3312f96adf, type: 3}
+  mainMenuMusic: {fileID: 8300000, guid: 912ffa6120e412048aff0fb0fd5d1ccf, type: 3}
+  pauseMenuMusic: {fileID: 8300000, guid: 8e31c6de95682994494d01bf6bd520be, type: 3}
+  gameOverMusic: {fileID: 8300000, guid: 3f1f96ee366f83f488cc5220c5957118, type: 3}
+  gameWinMusic: {fileID: 8300000, guid: f483ba398a3512145866c6a3966bc1e5, type: 3}
+  escapeMusic: {fileID: 8300000, guid: 91a062e6a807ae04fbe35a9f7bd76abf, type: 3}
+  combatMusic: {fileID: 8300000, guid: 59a7fcae22b7dce4fa6e846c2084554a, type: 3}
 --- !u!82 &-1716748242801845156
 AudioSource:
   m_ObjectHideFlags: 0
@@ -108,6 +108,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -204,6 +205,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
