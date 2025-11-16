@@ -458,19 +458,19 @@ PrefabInstance:
     - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
       propertyPath: alienOneHurtSound
       value: 
-      objectReference: {fileID: 8300000, guid: 4a5835e999d0cda48aaa2e8ba85da8eb, type: 3}
+      objectReference: {fileID: 8300000, guid: f07b8055292638e468afcd5266af6e94, type: 3}
     - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
       propertyPath: alienOneIdleSound
       value: 
-      objectReference: {fileID: 8300000, guid: b1b03b9722aaa52429e51928476601e0, type: 3}
+      objectReference: {fileID: 8300000, guid: 2a8af3cd025f2394199aa7282b853242, type: 3}
     - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
       propertyPath: alienTwoHurtSound
       value: 
-      objectReference: {fileID: 8300000, guid: b4184f250ee13c14493a8f4f887b49e2, type: 3}
+      objectReference: {fileID: 8300000, guid: a8edfd7ab023bff4081fe6b13c5757dd, type: 3}
     - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
       propertyPath: alienTwoIdleSound
       value: 
-      objectReference: {fileID: 8300000, guid: ef21d29eaf7afcd4c8d6c2193e78c80c, type: 3}
+      objectReference: {fileID: 8300000, guid: 9fb98e6e1bde9b642bc07bf66207dd29, type: 3}
     - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
       propertyPath: grenadeThrowSound
       value: 
@@ -490,11 +490,11 @@ PrefabInstance:
     - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
       propertyPath: alienOneDeathSound
       value: 
-      objectReference: {fileID: 8300000, guid: aa0121f3b254c6c4e95ac875e0fb05c6, type: 3}
+      objectReference: {fileID: 8300000, guid: a08741368c3d2c74c9838a2b83f00921, type: 3}
     - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
       propertyPath: alienTwoDeathSound
       value: 
-      objectReference: {fileID: 8300000, guid: 8e8226f3839efae4085ed24121087b86, type: 3}
+      objectReference: {fileID: 8300000, guid: 8ce45fe896c0dbf4bbe7554b8bb1b4b3, type: 3}
     - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
       propertyPath: autoRifleFireSound
       value: 
@@ -506,19 +506,19 @@ PrefabInstance:
     - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
       propertyPath: alienOneAttackSound
       value: 
-      objectReference: {fileID: 8300000, guid: 6a8581fb7abf0fa46ab60bda5ad91d08, type: 3}
+      objectReference: {fileID: 8300000, guid: fec0f3ac90a4a994699e797dc118af3f, type: 3}
     - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
       propertyPath: alienThreeHurtSound
       value: 
-      objectReference: {fileID: 8300000, guid: f07b8055292638e468afcd5266af6e94, type: 3}
+      objectReference: {fileID: 8300000, guid: b4184f250ee13c14493a8f4f887b49e2, type: 3}
     - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
       propertyPath: alienThreeIdleSound
       value: 
-      objectReference: {fileID: 8300000, guid: 2a8af3cd025f2394199aa7282b853242, type: 3}
+      objectReference: {fileID: 8300000, guid: 944df8ec7d51e214b9a4a80aed619bd5, type: 3}
     - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
       propertyPath: alienTwoAttackSound
       value: 
-      objectReference: {fileID: 8300000, guid: d136544f6bda7d84abdef68fb51f17e2, type: 3}
+      objectReference: {fileID: 8300000, guid: 9fb98e6e1bde9b642bc07bf66207dd29, type: 3}
     - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
       propertyPath: grenadeExplodeSound
       value: 
@@ -526,7 +526,7 @@ PrefabInstance:
     - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
       propertyPath: alienThreeDeathSound
       value: 
-      objectReference: {fileID: 8300000, guid: a08741368c3d2c74c9838a2b83f00921, type: 3}
+      objectReference: {fileID: 8300000, guid: 8e8226f3839efae4085ed24121087b86, type: 3}
     - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
       propertyPath: autoRifleReloadSound
       value: 
@@ -542,7 +542,7 @@ PrefabInstance:
     - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
       propertyPath: alienThreeAttackSound
       value: 
-      objectReference: {fileID: 8300000, guid: fec0f3ac90a4a994699e797dc118af3f, type: 3}
+      objectReference: {fileID: 8300000, guid: a161207523df5f242a01067816735506, type: 3}
     - target: {fileID: 4103755477592474035, guid: a8770bf467793854687d723d007feb52, type: 3}
       propertyPath: ricochetGunReloadSound
       value: 
