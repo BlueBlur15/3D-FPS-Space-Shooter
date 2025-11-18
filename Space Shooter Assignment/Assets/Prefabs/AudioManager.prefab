@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfxSource: {fileID: -1716748242801845156}
   musicSource: {fileID: 1049136234373928559}
-  jumpSound: {fileID: 8300000, guid: fbd20e6ec60213249b0d226ed2fe790e, type: 3}
+  jumpSound: {fileID: 8300000, guid: 719fa6db19df59f4e83053d01ecdb08f, type: 3}
   landSound: {fileID: 8300000, guid: 6cd79112a1258844ab7b0cf305f127d7, type: 3}
   walkSound: {fileID: 8300000, guid: 7ea61e0907bb0cc468b70fcae4aef64c, type: 3}
   sprintSound: {fileID: 8300000, guid: 06ba4cef26fa96b4b9c1e8f04497642f, type: 3}
