@@ -3,24 +3,23 @@ using UnityEngine;
 public class AlienBeetle : MonoBehaviour
 {
     [Header("Follow Settings")]
-    public float followRange = 10f;         // how close the player needs to be
-    public float moveSpeed = 3f;            // how fast the beetle moves
-    public float stopDistance = 1.5f;       // how close it stops before touching you
+    public float followRange = 10f;      // how close the player needs to be
+    public float moveSpeed = 3f;         // how fast the beetle moves
+    public float stopDistance = 1.5f;    // how close it stops before touching you
 
     [Header("Attack Settings")]
-    public float attackRange = 2f;          // distance to start attack
-    public float attackCooldown = 1.5f;     // delay between attacks
+    public float attackCooldown = 1.5f;  // time between attack animations
 
     [Header("References")]
-    public Animator animator;               // drag in Inspector or auto-find
+    public Animator animator;            // assign in Inspector or auto-find
 
     private Transform player;
-    private float lastAttackTime;
+    private float lastAttackTime = -999f;
     private bool isDead = false;
 
     private void Start()
     {
-        // Find the player by tag
+        // Find the player
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null)
         {
@@ -28,7 +27,7 @@ public class AlienBeetle : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("NightmareBeetle: No object with tag 'Player' found in scene");
+            Debug.LogWarning("AlienBeetle: No object with tag 'Player' found in scene");
         }
 
         // Grab Animator automatically if not assigned
@@ -36,7 +35,9 @@ public class AlienBeetle : MonoBehaviour
         {
             animator = GetComponent<Animator>();
             if (animator == null)
-                Debug.LogWarning("NightmareBeetle: No Animator found on this GameObject");
+            {
+                Debug.LogWarning("AlienBeetle: No Animator found on this GameObject");
+            }
         }
     }
 
@@ -48,19 +49,18 @@ public class AlienBeetle : MonoBehaviour
         float distance = Vector3.Distance(transform.position, player.position);
 
         // --- MOVEMENT ---
-
         bool shouldFollow = distance <= followRange && distance > stopDistance;
 
         if (shouldFollow)
         {
-            // Direction toward player, staying on level Y
+            // Direction toward player, staying level on Y
             Vector3 direction = (player.position - transform.position).normalized;
             direction.y = 0f;
 
             // Move toward the player
             transform.position += direction * moveSpeed * Time.deltaTime;
 
-            // Face the player (keep beetle upright)
+            // Face the player
             Vector3 lookPos = player.position;
             lookPos.y = transform.position.y;
             transform.LookAt(lookPos);
@@ -68,32 +68,38 @@ public class AlienBeetle : MonoBehaviour
 
         // Tell the Animator whether we're moving
         animator.SetBool("IsMoving", shouldFollow);
-
-        // --- ATTACK ---
-
-        bool inAttackRange = distance <= attackRange;
-        bool canAttack = Time.time - lastAttackTime >= attackCooldown;
-
-        if (inAttackRange && canAttack)
-        {
-            lastAttackTime = Time.time;
-            animator.SetBool("IsAttacking", true);
-        }
-        else
-        {
-            animator.SetBool("IsAttacking", false);
-        }
     }
 
-    // Call this when the beetle dies
+    // Called by HurtZone when it damages the player
+    public void TryPlayAttack()
+    {
+        if (isDead || animator == null) return;
+
+        if (Time.time - lastAttackTime < attackCooldown)
+            return; // too soon, don't restart animation
+
+        lastAttackTime = Time.time;
+        animator.SetTrigger("Attack");   // Animator must have a Trigger called "Attack"
+    }
+
+    // Called by EnemyHealth when HP reaches 0
     public void Die()
     {
         if (isDead) return;
         isDead = true;
 
-        animator.SetBool("IsDead", true);
+        if (animator == null)
+            animator = GetComponent<Animator>();
 
-        // Stop this script from updating movement/attacks - Optional, figure out if I'll use it or not
-        // this.enabled = false;
+        Debug.Log("AlienBeetle.Die(): forcing death state");
+
+        // Stop run/idles from fighting the state machine
+        animator.SetBool("IsMoving", false);
+        animator.SetBool("IsDead", true);    // optional, but fine to keep
+
+        // Force-play the 'death' state on Base Layer (layer 0)
+        // The state in the Animator must be named exactly "death"
+        animator.CrossFade("death", 0.05f, 0);
+        // or: animator.Play("death", 0, 0f);
     }
 }
