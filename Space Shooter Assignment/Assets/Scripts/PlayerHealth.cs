@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
@@ -12,13 +10,12 @@ public class PlayerHealth : MonoBehaviour
     [Header("Lives")]
     public int lives = 3;
     public float respawnDelay = 1.5f;
-    public Transform respawnPoint;          // optional, can be empty
+    public Transform respawnPoint;
 
     private bool isDead = false;
 
-    // Events
-    public event Action<int, int> OnHealthOrLivesChanged;   // (currentHealth, lives)
-    public event Action OnPlayerDied;                       // fires when lives hit 0
+    public event Action<int, int> OnHealthOrLivesChanged;
+    public event Action OnPlayerDied;
 
     private void Start()
     {
@@ -32,33 +29,35 @@ public class PlayerHealth : MonoBehaviour
 
         currentHealth -= amount;
         Debug.Log("Player took damage. HP: " + currentHealth);
+        RaiseHealthEvent();
 
         if (currentHealth <= 0)
         {
             Die();
         }
+    }
 
-        void Die()
+    private void Die()
+    {
+        if (isDead) return;
+        isDead = true;
+        lives--;
+
+        Debug.Log("Player died. Lives left: " + lives);
+        RaiseHealthEvent();
+
+        if (lives > 0)
         {
-            isDead = true;
-            lives--;
-
-            Debug.Log("PLayer died. Lives left: " + lives);
-
-            if (lives > 0)
-            {
-                // Simple respawn
-                Invoke(nameof(respawnDelay), respawnDelay);
-            }
-            else
-            {
-                OnPlayerDied?.Invoke();
-                Debug.Log("GAME OVER (placerholder)");
-            }
+            Invoke(nameof(Respawn), respawnDelay);
+        }
+        else
+        {
+            OnPlayerDied?.Invoke();
+            Debug.Log("GAME OVER (placeholder)");
         }
     }
 
-    void Respawn()
+    private void Respawn()
     {
         currentHealth = maxHealth;
         isDead = false;
@@ -67,14 +66,11 @@ public class PlayerHealth : MonoBehaviour
         {
             transform.position = respawnPoint.position;
         }
-        else
-        {
-            // If no respawn point, just stay where you died for now
-            Debug.Log("No respawn point set. Player stays in place.");
-        }
+
+        RaiseHealthEvent();
     }
 
-    void RaiseHealthEvent()
+    private void RaiseHealthEvent()
     {
         OnHealthOrLivesChanged?.Invoke(currentHealth, lives);
     }
