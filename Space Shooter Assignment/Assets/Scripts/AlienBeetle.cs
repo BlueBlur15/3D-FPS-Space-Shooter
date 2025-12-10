@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AlienBeetle : MonoBehaviour
 {
@@ -100,6 +100,12 @@ public class AlienBeetle : MonoBehaviour
         if (isDead) return;
         isDead = true;
 
+        // 🔹 Tell the level manager that an enemy has been killed
+        if (LevelEnemyManager.instance != null)
+        {
+            LevelEnemyManager.instance.EnemyKilled();
+        }
+
         if (animator == null)
             animator = GetComponent<Animator>();
 
@@ -110,8 +116,16 @@ public class AlienBeetle : MonoBehaviour
         animator.SetBool("IsDead", true);    // optional, but fine to keep
 
         // Force-play the 'death' state on Base Layer (layer 0)
-        // The state in the Animator must be named exactly "death"
         animator.CrossFade("death", 0.05f, 0);
         // or: animator.Play("death", 0, 0f);
+
+        // 🔹 Optional but nice: stop collisions/AI and destroy after anim
+        Collider col = GetComponent<Collider>();
+        if (col != null) col.enabled = false;
+
+        this.enabled = false; // stop Update / AI logic on this script
+
+        // Destroy after ~2 seconds (tweak to match your death anim length)
+        Destroy(gameObject, 2f);
     }
 }
