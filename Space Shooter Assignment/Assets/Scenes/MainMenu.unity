@@ -575,8 +575,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0c5b54ec4bd1d2742806094aa219a1ae, type: 2}
-  m_sharedMaterial: {fileID: -5023723330727726284, guid: 0c5b54ec4bd1d2742806094aa219a1ae, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -716,7 +716,11 @@ MonoBehaviour:
   commandInputField: {fileID: 1481223379}
   outputScreenText: {fileID: 357487552}
   playerController: {fileID: 1732695187}
-  defaultScreenText: 'Commands
+  defaultScreenText: '                                            Welcome to Alien
+    Exterminator
+
+
+    Commands
 
 
     Play
@@ -737,9 +741,41 @@ MonoBehaviour:
 
     Back'
   creditsPages:
-  - Example Credits 2
+  - 'Player Audio sourced from: Pixabay, SFXLibrary.
+
+    Notable Sound Artists:
+    freesound_community, Universfield.
+
+
+    Enemy Audio sourced from: Pixabay.
+
+    Notable
+    Sound Artists: freesound_community, DavidDumaisAudio, u_iqwurd6lux, DRAGON-STUDIO,
+    GSMsea.'
+  - 'Weapon Audio sourced from: Pixabay.
+
+    Notable Sound Artists: mrfriends, freesound_community,
+    Red_Army_Soviet, Universfield, MelBeeBelBee, u_xjrmmgxfru, floraphonic, Ahmed_Abdulaal.
+
+
+    Level
+    Audio sourced from Pixabay.
+
+    Notable Sound Artists: AlesiaDavina, SoundReality,
+    freesound_community, DRAGON-STUDIO, XtremeFreddy, Universfield.
+
+
+    Props/Textures/Enemies
+    sourced form Unity Assets Store'
   instructionPages:
-  - Example Instructions 1
+  - 'Control Camera and Aim: Mouse
+
+
+    Movement: WASD/Arrow Keys'
+  - 'Jump: Spacebar
+
+
+    Shoot: Left-Click'
   typewriter: {fileID: 357487554}
   playSceneName: Level one
   playDelay: 5
@@ -1578,8 +1614,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Enter Command\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0c5b54ec4bd1d2742806094aa219a1ae, type: 2}
-  m_sharedMaterial: {fileID: -5023723330727726284, guid: 0c5b54ec4bd1d2742806094aa219a1ae, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1714,8 +1750,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press E to interact
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0c5b54ec4bd1d2742806094aa219a1ae, type: 2}
-  m_sharedMaterial: {fileID: -5023723330727726284, guid: 0c5b54ec4bd1d2742806094aa219a1ae, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3460,8 +3496,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Enter text...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0c5b54ec4bd1d2742806094aa219a1ae, type: 2}
-  m_sharedMaterial: {fileID: -5023723330727726284, guid: 0c5b54ec4bd1d2742806094aa219a1ae, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
