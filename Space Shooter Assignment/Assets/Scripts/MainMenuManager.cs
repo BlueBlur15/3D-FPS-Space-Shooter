@@ -10,23 +10,18 @@ public class MainMenuManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void PlayButton()
+    public void BackButton()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void LevelOneButton()
     {
         SceneManager.LoadScene("Level one");
     }
 
-    public void CreditsButton()
+    public void LevelTwoButton()
     {
-        SceneManager.LoadScene("Credits");
-    }
-
-    public void InstructionsButton()
-    {
-        SceneManager.LoadScene("Instructions");
-    }
-
-    public void BackButton()
-    {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Level Two");
     }
 }
