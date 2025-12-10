@@ -61,6 +61,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip beepingSounds; // Like for high tech areas, think Sci-Fi movies whenever terminals and buttons are nearby
     public AudioClip doorOpenSound; // Futuristic sliding door
     public AudioClip doorCloseSound;
+    public AudioClip terminalEnterSound;
+    public AudioClip terminalExitSound;
 
 
     // Music Sounds
@@ -70,6 +72,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip gameWinMusic;
     public AudioClip escapeMusic; // If we ever want to pull off a Metroid escape scene in one of our levels
     public AudioClip combatMusic; // Something metal/rock guitar, there are some good free musics out there
+    public AudioClip levelOneMusic;
 
     public void Awake()
     {

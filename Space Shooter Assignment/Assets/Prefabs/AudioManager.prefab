@@ -91,12 +91,15 @@ MonoBehaviour:
   beepingSounds: {fileID: 8300000, guid: b9aef167dabe485408f4c6b79e5a018e, type: 3}
   doorOpenSound: {fileID: 8300000, guid: ed121f7508eb46f41995618758bf128b, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 44eb180d9d990454b8fb4e3312f96adf, type: 3}
+  terminalEnterSound: {fileID: 8300000, guid: 2842a97c1a176446cb3688fe1fbf4bce, type: 3}
+  terminalExitSound: {fileID: 8300000, guid: e1e2b7b9c63644b81a31230ec5110cc9, type: 3}
   mainMenuMusic: {fileID: 8300000, guid: 912ffa6120e412048aff0fb0fd5d1ccf, type: 3}
   pauseMenuMusic: {fileID: 8300000, guid: 8e31c6de95682994494d01bf6bd520be, type: 3}
   gameOverMusic: {fileID: 8300000, guid: 3f1f96ee366f83f488cc5220c5957118, type: 3}
   gameWinMusic: {fileID: 8300000, guid: f483ba398a3512145866c6a3966bc1e5, type: 3}
   escapeMusic: {fileID: 8300000, guid: 91a062e6a807ae04fbe35a9f7bd76abf, type: 3}
   combatMusic: {fileID: 8300000, guid: 59a7fcae22b7dce4fa6e846c2084554a, type: 3}
+  levelOneMusic: {fileID: 8300000, guid: a816defdd32fb41f98b1a4ce36662a3d, type: 3}
 --- !u!82 &-1716748242801845156
 AudioSource:
   m_ObjectHideFlags: 0

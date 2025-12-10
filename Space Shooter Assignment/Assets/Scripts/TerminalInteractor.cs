@@ -27,6 +27,7 @@ public class TerminalInteractor : MonoBehaviour
             {
                 isUsingTerminal = true;
                 terminal.EnterTerminal();
+                AudioManager.instance.PlaySFX(AudioManager.instance.terminalEnterSound);
             }
         }
         else
@@ -36,6 +37,7 @@ public class TerminalInteractor : MonoBehaviour
             {
                 isUsingTerminal = false;
                 terminal.ExitTerminal();
+                AudioManager.instance.PlaySFX(AudioManager.instance.terminalExitSound);
             }
         }
     }
