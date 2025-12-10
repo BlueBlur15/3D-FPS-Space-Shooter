@@ -3868,6 +3868,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nightmare Beetle (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5962782623807585584, guid: d72937274762e9c40b3b5605ba99844e, type: 3}
+      propertyPath: maxHealth
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
