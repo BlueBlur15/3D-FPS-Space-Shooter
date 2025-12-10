@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1159930673137867384}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.373, z: 0.056}
+  m_LocalPosition: {x: 0, y: 1.26, z: 0.056}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -230,7 +230,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1075843927211058216}
@@ -326,10 +326,10 @@ MonoBehaviour:
   mouseSensitivity: 2
   minPitch: -90
   maxPitch: 90
-  walkSpeed: 5
-  sprintSpeed: 8
+  walkSpeed: 12.5
+  sprintSpeed: 25
   enableSprint: 1
-  jumpHeight: 1.2
+  jumpHeight: 3
   gravity: -20
   groundedStick: -2
   stepInterval: 0.5
