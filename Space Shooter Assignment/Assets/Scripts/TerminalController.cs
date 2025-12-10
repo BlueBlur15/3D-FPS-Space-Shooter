@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using TMPro;   // TMP_InputField, TextMeshProUGUI
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class TerminalController : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class TerminalController : MonoBehaviour
 
     [Header("Effects")]
     public TypewriterEffect typewriter;           // attach on big monitor text, drag here
+
     public string playSceneName = "Level one";
     public float playDelay = 5f;
     public float quitDelay = 5f;
@@ -35,7 +37,6 @@ public class TerminalController : MonoBehaviour
 
     void Start()
     {
-        // Initialize screen at start
         ShowDefaultScreen();
     }
 
@@ -43,7 +44,6 @@ public class TerminalController : MonoBehaviour
     // Enter / Exit Terminal
     // --------------------------------------------------------------------
 
-    // Called by TerminalInteractor when pressing E
     public void EnterTerminal()
     {
         isUsingTerminal = true;
@@ -53,12 +53,14 @@ public class TerminalController : MonoBehaviour
 
         if (commandInputField != null)
         {
+            commandInputField.interactable = true;
             commandInputField.text = string.Empty;
+
             commandInputField.ActivateInputField();
+            EventSystem.current.SetSelectedGameObject(commandInputField.gameObject);
         }
     }
 
-    // Called by TerminalInteractor when pressing Tab
     public void ExitTerminal()
     {
         isUsingTerminal = false;
@@ -67,14 +69,18 @@ public class TerminalController : MonoBehaviour
             playerController.SetControlsLocked(false);
 
         if (commandInputField != null)
+        {
             commandInputField.DeactivateInputField();
+            commandInputField.interactable = false;
+        }
+
+        StartCoroutine(ClearFocusNextFrame()); // <<< FULL FIX
     }
 
     // --------------------------------------------------------------------
     // Command input
     // --------------------------------------------------------------------
 
-    // Hook this to the InputField's OnEndEdit / OnSubmit event
     public void OnCommandSubmitted(string rawCommand)
     {
         Debug.Log($"[Terminal] Submitted: '{rawCommand}'");
@@ -88,7 +94,6 @@ public class TerminalController : MonoBehaviour
 
         string cmd = rawCommand.Trim().ToLowerInvariant();
 
-        // Clear input box & refocus right away
         if (commandInputField != null)
         {
             commandInputField.text = string.Empty;
@@ -140,13 +145,9 @@ public class TerminalController : MonoBehaviour
     void SetScreenText(string text)
     {
         if (typewriter != null)
-        {
             typewriter.TypeText(text);
-        }
         else if (outputScreenText != null)
-        {
             outputScreenText.text = text;
-        }
     }
 
     void ShowDefaultScreen()
@@ -215,7 +216,7 @@ public class TerminalController : MonoBehaviour
     }
 
     // --------------------------------------------------------------------
-    // Messages for specific commands (play/quit/error)
+    // Messages for specific commands
     // --------------------------------------------------------------------
 
     void ShowPlayMessage()
@@ -235,19 +236,17 @@ public class TerminalController : MonoBehaviour
         SetScreenText($"Unknown command: {cmd}\nType HELP for a list of commands.");
     }
 
+    private System.Collections.IEnumerator ClearFocusNextFrame()
+    {
+        yield return null; // wait one frame
+        if (EventSystem.current != null)
+            EventSystem.current.SetSelectedGameObject(null);
+    }
+
     private System.Collections.IEnumerator PlaySequence()
     {
-        // Wait so the player can read the message
         yield return new WaitForSeconds(playDelay);
-
-        if (!string.IsNullOrEmpty(playSceneName))
-        {
-            SceneManager.LoadScene(playSceneName);
-        }
-        else
-        {
-            Debug.LogWarning("[Terminal] playSCeneName is empty. Set it in the Inspector.");
-        }
+        SceneManager.LoadScene(playSceneName);
     }
 
     private System.Collections.IEnumerator QuitSequence()
@@ -257,7 +256,7 @@ public class TerminalController : MonoBehaviour
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false; // Stops play mode in editor
 #else
-    Application.Quit();     // quits a build
+        Application.Quit(); // quits a build
 #endif
     }
 }
