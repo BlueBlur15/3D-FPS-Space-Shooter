@@ -2606,14 +2606,21 @@ MonoBehaviour:
     Props/Textures/Enemies
     sourced form Unity Assets Store'
   instructionPages:
-  - 'Control Camera and Aim: Mouse
+  - 'Page 1
 
+    Movement: WASD
 
-    Movement: WASD/Arrow Keys'
-  - 'Jump: Spacebar
+    Jump: Spacebar
 
+    Sprint: Shift
 
-    Shoot: Left-Click'
+    Shoot:
+    Left-click
+
+    Weapon Select: 1, 2, 3 or Scroll Wheel'
+  - 'Page 2
+
+    Objective: Destroy all of the enemies in each level'
   typewriter: {fileID: 357487554}
   playSceneName: Level one
   playDelay: 5
