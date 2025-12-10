@@ -17,6 +17,9 @@ public class Gun : MonoBehaviour
     public Transform firePoint;                 // Where bullets spawn
     public GameObject bulletPrefab;             // The projectile
 
+    public GameObject muzzleFlashPrefab;        // Visual flash prefab
+    public Transform muzzlePoint;               // Where the flash appears
+
     private float nextFireTime = 0f;
 
     public void TryShoot()
@@ -64,5 +67,10 @@ public class Gun : MonoBehaviour
 
         // Play fire sound
         AudioManager.instance.PlaySFX(AudioManager.instance.pistolFireSound);
+
+        if (muzzleFlashPrefab != null && muzzlePoint != null)
+        {
+            Instantiate(muzzleFlashPrefab, muzzlePoint.position, muzzlePoint.rotation);
+        }
     }
 }

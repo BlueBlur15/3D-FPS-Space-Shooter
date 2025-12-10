@@ -21,6 +21,8 @@ public class FpsController : MonoBehaviour
 
     [Header("Footstep SFX")]
     public float stepInterval = 0.5f;       // base interval for walk steps (tweak)
+    
+    public bool controlsLocked = false;
 
     private CharacterController controller;
     private float cameraPitch = 0f;
@@ -37,6 +39,8 @@ public class FpsController : MonoBehaviour
 
     void Update()
     {
+        if (controlsLocked) return;
+
         HandleLook();
         HandleMoveAndJump();
     }
@@ -123,5 +127,21 @@ public class FpsController : MonoBehaviour
 
         // remember grounded state for landing detection next frame
         wasGroundedLastFrame = controller.isGrounded;
+    }
+
+    public void SetControlsLocked(bool locked)
+    {
+        controlsLocked = locked;
+
+        if (locked)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
     }
 }

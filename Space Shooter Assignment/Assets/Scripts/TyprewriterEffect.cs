@@ -1,29 +1,35 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 
-public class TyprewriterEffect : MonoBehaviour
+public class TypewriterEffect : MonoBehaviour
 {
-    public float typingSpeed = 0.05f;       // Speed of typing
-    public string fullText;                 // The full text to display
-    private string currentText = "";        // The text currently displayed
-    private TextMeshProUGUI textMeshPro;    // Reference to the text object
+    public float typingSpeed = 0.05f;
+
+    private TextMeshProUGUI textMesh;
+    private Coroutine typingCoroutine;
 
     private void Awake()
     {
-        textMeshPro = GetComponent<TextMeshProUGUI>();
-        StartCoroutine(TypeText());
+        textMesh = GetComponent<TextMeshProUGUI>();
     }
 
-    private IEnumerator TypeText()
+    public void TypeText(string fullText)
     {
-        foreach (char letter in fullText.ToCharArray())
+        // Stop any currently-running typewriter animation
+        if (typingCoroutine != null)
+            StopCoroutine(typingCoroutine);
+
+        typingCoroutine = StartCoroutine(TypeTextRoutine(fullText));
+    }
+
+    private IEnumerator TypeTextRoutine(string fullText)
+    {
+        textMesh.text = "";
+        foreach (char letter in fullText)
         {
-            currentText += letter;                              // Add one letter at a time
-            textMeshPro.text = currentText;                     // Update the text displayed
-            yield return new WaitForSeconds(typingSpeed);       // Wait before typing the next letter
+            textMesh.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
         }
     }
 }

@@ -13,6 +13,9 @@ public class AlienBeetle : MonoBehaviour
     [Header("References")]
     public Animator animator;            // assign in Inspector or auto-find
 
+    [Header("Visual")]
+    public bool flipForward = false;     // set true if the model is built facing "backwards"
+
     private Transform player;
     private float lastAttackTime = -999f;
     private bool isDead = false;
@@ -46,24 +49,33 @@ public class AlienBeetle : MonoBehaviour
         if (isDead) return;
         if (player == null || animator == null) return;
 
-        float distance = Vector3.Distance(transform.position, player.position);
+        // Direction (flat on Y) from beetle to player
+        Vector3 toPlayer = player.position - transform.position;
+        toPlayer.y = 0f;
+
+        float distance = toPlayer.magnitude;
 
         // --- MOVEMENT ---
         bool shouldFollow = distance <= followRange && distance > stopDistance;
 
-        if (shouldFollow)
+        if (shouldFollow && distance > 0.001f)
         {
-            // Direction toward player, staying level on Y
-            Vector3 direction = (player.position - transform.position).normalized;
-            direction.y = 0f;
+            // Normalize direction
+            Vector3 direction = toPlayer / distance;
 
             // Move toward the player
             transform.position += direction * moveSpeed * Time.deltaTime;
 
             // Face the player
-            Vector3 lookPos = player.position;
-            lookPos.y = transform.position.y;
-            transform.LookAt(lookPos);
+            Quaternion targetRot = Quaternion.LookRotation(direction, Vector3.up);
+
+            // If this model is authored facing the opposite way, flip 180 degrees
+            if (flipForward)
+            {
+                targetRot *= Quaternion.Euler(0f, 180f, 0f);
+            }
+
+            transform.rotation = targetRot;
         }
 
         // Tell the Animator whether we're moving
