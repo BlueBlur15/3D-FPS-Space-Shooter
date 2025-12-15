@@ -31,7 +31,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (isDead) return;
         isDead = true;
-
+        AudioManager.instance.PlaySFX(AudioManager.instance.alienThreeAttackSound);
         Debug.Log("EnemyHealth.Die() called");
 
         if (beetleAI != null)

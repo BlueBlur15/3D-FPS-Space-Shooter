@@ -73,6 +73,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip escapeMusic; // If we ever want to pull off a Metroid escape scene in one of our levels
     public AudioClip combatMusic; // Something metal/rock guitar, there are some good free musics out there
     public AudioClip levelOneMusic;
+    public AudioClip testLevelMusic;
 
     public void Awake()
     {

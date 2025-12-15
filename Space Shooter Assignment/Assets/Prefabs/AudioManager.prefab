@@ -100,6 +100,7 @@ MonoBehaviour:
   escapeMusic: {fileID: 8300000, guid: 91a062e6a807ae04fbe35a9f7bd76abf, type: 3}
   combatMusic: {fileID: 8300000, guid: 59a7fcae22b7dce4fa6e846c2084554a, type: 3}
   levelOneMusic: {fileID: 8300000, guid: a816defdd32fb41f98b1a4ce36662a3d, type: 3}
+  testLevelMusic: {fileID: 8300000, guid: fbee2dad2301a964ea6bc14d48a9b138, type: 3}
 --- !u!82 &-1716748242801845156
 AudioSource:
   m_ObjectHideFlags: 0
