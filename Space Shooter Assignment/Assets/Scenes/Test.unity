@@ -3907,6 +3907,53 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e7afdf31c20ebf419ea38bf1d358719, type: 3}
+--- !u!1 &446809264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 446809266}
+  - component: {fileID: 446809265}
+  m_Layer: 0
+  m_Name: LevelEnemyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &446809265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446809264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dabc597e9f053942953a0d20ed94ef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalEnemies: 0
+  nextSceneName: 
+  enemiesLeftText: {fileID: 1552257528}
+--- !u!4 &446809266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446809264}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.1353736, y: 4.2397075, z: 5.848579}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &847970966
 GameObject:
   m_ObjectHideFlags: 0
@@ -4705,6 +4752,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1349044198}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1552257528 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3390254944366398089, guid: b3d334d42607e1e4d87c1dd42b739bc9, type: 3}
+  m_PrefabInstance: {fileID: 1484509781182725776}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1640767123
 GameObject:
   m_ObjectHideFlags: 0
@@ -5076,6 +5134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flying beetle
       objectReference: {fileID: 0}
+    - target: {fileID: 6171145753994866766, guid: c446b6050070cdd48a80ba0b525c71bf, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5190,6 +5252,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nightmare Beetle
       objectReference: {fileID: 0}
+    - target: {fileID: 5621408958029688556, guid: d72937274762e9c40b3b5605ba99844e, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5214,3 +5280,4 @@ SceneRoots:
   - {fileID: 386891117}
   - {fileID: 6228470768562472102}
   - {fileID: 878420}
+  - {fileID: 446809266}
